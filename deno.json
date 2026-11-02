@@ -3,6 +3,9 @@
 	"version": "0.3.0",
 	"license": "MIT",
 	"exports": "./src/body-meta.ts",
+	"tasks": {
+		"check": "deno fmt --check && deno lint && deno test -A"
+	},
 	"publish": {
 		"include": [
 			"readme.md",

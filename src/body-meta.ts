@@ -16,10 +16,10 @@ export function encode<T = any>(data: T): string {
 	const {
 		body = '',
 		...flatData
-	} = flatten(data);
+	} = flatten(data) as any;
 
 	const bodyData = Object.keys(flatData)
-		.map(key => `${key}: ${JSON.stringify(flatData[key])}`)
+		.map((key) => `${key}: ${JSON.stringify(flatData[key])}`)
 		.join('\n');
 
 	return body + '\n\n' + bodyData;
@@ -58,9 +58,9 @@ export function decode<T = any>(body: string): T {
 		const row = rows.pop();
 		if (row === undefined) break;
 		if (row === '') continue;
-			rows.push(row);
-			break;
-			}
+		rows.push(row);
+		break;
+	}
 
 	data.body = rows.join('\n');
 

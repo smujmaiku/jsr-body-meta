@@ -1,7 +1,7 @@
-import {
-	encode,
-	decode,
-} from './body-meta';
+import { describe, it } from 'node:test';
+import { expect } from '@std/expect';
+
+import { decode, encode } from './body-meta.ts';
 
 describe('body-meta', () => {
 	describe('encode', () => {

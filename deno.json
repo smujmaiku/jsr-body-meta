@@ -1,0 +1,22 @@
+{
+	"name": "@smujdev/body-meta",
+	"version": "0.3.0",
+	"license": "MIT",
+	"exports": "./src/body-meta.ts",
+	"publish": {
+		"include": [
+			"readme.md",
+			"src/**/*.ts"
+		]
+	},
+	"fmt": {
+		"singleQuote": true,
+		"useTabs": true
+	},
+	"imports": {
+		"@std/assert": "jsr:@std/assert@1",
+		"@std/expect": "jsr:@std/expect@^1.0.20",
+		"@std/testing": "jsr:@std/testing@^1.0.21",
+		"flat": "npm:flat@^6.0.1"
+	}
+}

@@ -1,6 +1,6 @@
 /*!
  * Body Meta <https://github.com/smujmaiku/body-meta>
- * Copyright(c) 2021 Michael Szmadzinski
+ * Copyright(c) 2026 Marcline Szmadzinski
  * MIT Licensed
  */
 

@@ -12,11 +12,11 @@ import { flatten, unflatten } from 'flat';
  * @param {String} data.body
  * @returns {String}
  */
-export function encode<T = any>(data: T): string {
+export function encode<T extends Record<string, unknown>>(data: T): string {
 	const {
 		body = '',
 		...flatData
-	} = flatten(data) as any;
+	} = flatten(data) as T;
 
 	const bodyData = Object.keys(flatData)
 		.map((key) => `${key}: ${JSON.stringify(flatData[key])}`)
@@ -30,8 +30,8 @@ export function encode<T = any>(data: T): string {
  * @param {String} body
  * @returns {Object}
  */
-export function decode<T = any>(body: string): T {
-	const data: any = {};
+export function decode<T = Record<string, unknown>>(body: string): T {
+	const data: Record<string, unknown> = {};
 	const rows = body.split('\n');
 
 	while (body.length > 0) {
@@ -48,7 +48,7 @@ export function decode<T = any>(body: string): T {
 		const value = row.slice(colon + 1);
 		try {
 			data[key] = JSON.parse(value);
-		} catch (e) {
+		} catch (_e) {
 			data[key] = value.trim();
 		}
 	}

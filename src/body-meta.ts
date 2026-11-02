@@ -56,11 +56,11 @@ export function decode<T = any>(body: string): T {
 	// Remove extra blank lines
 	while (true) {
 		const row = rows.pop();
-		if (row !== '' && row !== undefined) {
+		if (row === undefined) break;
+		if (row === '') continue;
 			rows.push(row);
 			break;
-		}
-	}
+			}
 
 	data.body = rows.join('\n');
 

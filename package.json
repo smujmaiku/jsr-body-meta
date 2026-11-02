@@ -1,6 +1,6 @@
 {
   "name": "body-meta",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Lets store data in description fields",
   "main": "lib/body-meta.js",
   "types": "lib/body-meta.d.ts",
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/smujmaiku/body-meta.git"
   },
-  "author": "Michael Szmadzinski",
+  "author": "Marcline Szmadzinski",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/smujmaiku/body-meta/issues"

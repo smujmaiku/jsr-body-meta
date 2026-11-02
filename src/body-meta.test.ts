@@ -41,6 +41,11 @@ meta: data`)).toEqual({
 				body: 'some\nbody',
 				meta: 'data',
 			});
+
+			expect(decode(`meta:data`)).toEqual({
+				body: '',
+				meta: 'data',
+			});
 		});
 	});
 });
